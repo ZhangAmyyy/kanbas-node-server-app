@@ -6,7 +6,6 @@ import CourseRoutes from "./courses/routes.js";
 import ModuleRoutes from "./Modules/routes.js";
 import AssignmentRoutes from './Assignment/routes.js';
 import "dotenv/config";
-import session from "express-session";
 const app = express()
 app.use(
     cors({
