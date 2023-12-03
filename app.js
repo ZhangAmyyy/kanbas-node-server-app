@@ -2,7 +2,7 @@ import "dotenv/config";
 import express from 'express'
 import cors from "cors";
 import UserRoutes from "./users/routes.js";
-import mongoose from "mongoose";
+
 import session from "express-session";
 
 
@@ -12,7 +12,11 @@ import CourseRoutes from "./courses/routes.js";
 import ModuleRoutes from "./Modules/routes.js";
 import AssignmentRoutes from './Assignment/routes.js';
 import "dotenv/config";
-mongoose.connect("mongodb://127.0.0.1:27017/kanbas");
+import mongoose from "mongoose";
+// mongoose.connect("mongodb://127.0.0.1:27017/kanbas");
+
+// const uri = "mongodb+srv://test:<password>@atlascluster.wedmycv.mongodb.net/?retryWrites=true&w=majority";
+mongoose.connect("mongodb+srv://test:123@atlascluster.wedmycv.mongodb.net/?retryWrites=true&w=majority");
 const app = express()
 app.use(
     cors({
