@@ -46,10 +46,10 @@ const sessionOptions = {
   saveUninitialized: false,
 };
 if (process.env.NODE_ENV !== "development") {
-  sessionOptions.proxy = false;
+  sessionOptions.proxy = true;
   sessionOptions.cookie = {
     sameSite: "none",
-    secure: false,
+    secure: true,
   };
 }
 
