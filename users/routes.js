@@ -221,8 +221,8 @@ function UserRoutes(app) {
   };
 
   const createUser = async (req, res) => {
-    console.log('hou')
-    console.log(req.body)
+    // console.log('hou')
+    // console.log(req.body)
     
     const user = await dao.createUser(req.body);
     res.json(user);
@@ -244,7 +244,7 @@ function UserRoutes(app) {
     res.json(status);
   };
   const deleteUser = async (req, res) => {
-    const status = await dao.deleteUser(req.params.userId);
+    const status = await dao.deleteUser(req.params.id);
     res.json(status);
 };
 
@@ -255,8 +255,8 @@ function UserRoutes(app) {
     if (user) {
       currentUser = user;
       req.session["currentUser"] = currentUser;
-      console.log("si1")
-      console.log(req.session["currentUser"])
+      // console.log("si1")
+      // console.log(req.session["currentUser"])
       res.json(user);
     } else {
       res.sendStatus(403);
@@ -287,8 +287,8 @@ function UserRoutes(app) {
 
   const account = async (req, res) => {
     // const currentUser = req.session["currentUser"];
-    console.log("a1")
-    console.log(req.session['currentUser'])
+    // console.log("a1")
+    // console.log(req.session['currentUser'])
     // if (!currentUser) {
     //   res.sendStatus(403);
     //   return;
