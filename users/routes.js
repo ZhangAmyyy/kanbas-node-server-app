@@ -297,6 +297,13 @@ function UserRoutes(app) {
     res.json(req.session['currentUser']);
   };
 
+  // const checkAccount = async (req, res) => {
+  //   // const currentUser = req.session["currentUser"];
+  //   console.log("a1")
+  //   console.log(req.session['currentUser'])
+  //   res.json(req.session['currentUser']);
+  // };
+
   app.post("/api/users/signout", signout);
   app.post("/api/users/signin", signin);
   app.post("/api/users/account", account);
@@ -312,6 +319,8 @@ function UserRoutes(app) {
   app.get("/api/users/username/:username", findByUsername);
   app.get("/api/users/credentials/:username/:password", findUserByCredentials);
   app.put("/api/users/:id", updateUser);
+
+  // app.get("/api/users/account/:id", checkAccount);
 }
 
 export default UserRoutes;
